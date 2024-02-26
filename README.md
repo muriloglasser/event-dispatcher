@@ -1,2 +1,2 @@
-# event-dispatcher
- 
+# data-manager
+ Data manager for Unity
