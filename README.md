@@ -7,8 +7,6 @@
 - [Usage](#usage)
 - [Example](#example)
 
-The main utility class responsible for managing event dispatching, registration, and unregistration.
-
 ## Usage
 
 ### Dispatching data
