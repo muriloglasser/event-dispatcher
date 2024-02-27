@@ -19,11 +19,11 @@ public class DispatchData : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        // Load the "RecieveData" scene if it is not loaded yet
+        // Load the "RecieveData" scene if it is not loaded yet.
         if (!SceneManager.GetSceneByName("RecieveData").isLoaded)
             SceneManager.LoadScene("RecieveData", LoadSceneMode.Additive);
 
-        // Add a listener to the dispatchDataButton's click event
+        // Add a listener to the dispatchDataButton's click event.
         dispatchDataButton.onClick.AddListener(() =>
         {
             CheckDataToDispatch();
@@ -35,21 +35,21 @@ public class DispatchData : MonoBehaviour
     /// </summary>
     private void CheckDataToDispatch()
     {
-        // Check if ID input can be parsed to an integer
+        // Check if ID input can be parsed to an integer.
         if (!int.TryParse(idInputField.text, out int resultInt))
         {
             Debug.Log("ID is not an integer!");
             return;
         }
 
-        // Check if Distance input can be parsed to a float
+        // Check if Distance input can be parsed to a float.
         if (!float.TryParse(distanceInputField.text, out float resultFloat))
         {
             Debug.Log("Distance is not a float!");
             return;
         }
 
-        // Dispatch data with parsed input values
+        // Dispatch data with parsed input values.
         Dispatch(new DataManagerExampleStruct
         {
             id = int.Parse(idInputField.text),
@@ -64,10 +64,10 @@ public class DispatchData : MonoBehaviour
     /// <param name="data">The data to be dispatched.</param>
     private void Dispatch(DataManagerExampleStruct data)
     {
-        // Dispatch data using EventDispatcher
+        // Dispatch data using EventDispatcher.
         EventDispatcher.Dispatch<DataManagerExampleStruct>(data);
 
-        // Log the dispatched data in the console
+        // Log the dispatched data in the console.
         Debug.Log("Data dispatched: \n" +
                   "ID: " + data.id +
                   ", Distance: " + data.distance +
