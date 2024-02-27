@@ -1,6 +1,6 @@
 # EventDispatcher Class
 
-`EventDispatcher` is a utility class designed to simplify event dispatching, registration, and unregistration for different event types. It allows for the decoupling of components and facilitates communication within a Unity project.
+`EventDispatcher` is a utility class designed to simplify event dispatching, registration, and unregistration for different event types, allowing for the decoupling of components and facilitating communication within a Unity project. Notably, events dispatched using `EventDispatcher` can be listened to across different scenes.
 
 ## Table of Contents
 
